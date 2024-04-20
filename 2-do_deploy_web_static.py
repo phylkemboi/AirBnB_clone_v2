@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
+# Fabfile to distribute an archive to a web server.
+=======
 # Fabfile to ditribute an archive to a web server
 
 
+>>>>>>> f505fe9b5dd443858e87be5af9b15d8f653e0acf
 import os.path
 from fabric.api import env
 from fabric.api import put
