@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """This is the file storage class for AirBnB"""
+
 import json
 from models.base_model import BaseModel
 from models.user import User
@@ -8,8 +9,9 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
-import shlex
 
+classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
+           "Place": Place, "Review": Review, "State": State, "User": User}
 
 class FileStorage:
     """This class serializes instances to a JSON file and
@@ -75,6 +77,7 @@ class FileStorage:
             del self.__objects[key]
 
     def close(self):
-        """ calls reload()
+        """
+        calls reload() method for deserializing JSON file to objects
         """
         self.reload()
